@@ -32,6 +32,13 @@ jobs:
           pip install pytest
           pip install psutil
 
+          
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      
       - name: Automated Testing
         run: |
           cd LF8/src
