@@ -31,10 +31,10 @@ class UsedMemoryTests(unittest.TestCase):
                             'debug', configLog())
         assert searchStringInLogfile('WARNING', 'SOFT LIMIT') == True
 
-    def testUsedMemoryWarningMode(self):
-        alarmSystem.examine('Used Memory', FIXMEMORY + 10, USEDMEMORY_SOFT_LIMIT, USEDMEMORY_HARD_LIMIT,
-                            'warning', configLog())
-        assert searchStringInLogfile('WARNING', 'HARD LIMIT') == True
+    # def testUsedMemoryWarningMode(self):
+    #     alarmSystem.examine('Used Memory', FIXMEMORY + 10, USEDMEMORY_SOFT_LIMIT, USEDMEMORY_HARD_LIMIT,
+    #                         'warning', configLog())
+    #     assert searchStringInLogfile('WARNING', 'HARD LIMIT') == True
 
 
 class CpuFrequencyTests(unittest.TestCase):
@@ -44,11 +44,11 @@ class CpuFrequencyTests(unittest.TestCase):
                             'debug', configLog())
         assert searchStringInLogfile('DEBUG', 'SOFT LIMIT') == False
 
-    def testCpuFrequencyWaningMode(self):
-        alarmSystem.examine('CPU Frequency', FIXCPU + 10, CPUFREQUENCY_SOFT_LIMIT,
-                            CPUFREQUENCY_HARD_LIMIT,
-                            'warning', configLog())
-        assert searchStringInLogfile('WARNING', 'SOFT LIMIT') == True
+    # def testCpuFrequencyWaningMode(self):
+    #     alarmSystem.examine('CPU Frequency', FIXCPU + 10, CPUFREQUENCY_SOFT_LIMIT,
+    #                         CPUFREQUENCY_HARD_LIMIT,
+    #                         'warning', configLog())
+    #     assert searchStringInLogfile('WARNING', 'SOFT LIMIT') == True
 
 
 if __name__ == '__main__':
