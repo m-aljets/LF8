@@ -14,7 +14,7 @@ alarmSystem = Alarmsystem()
 
 
 def searchStringInLogfile(stringToSearch, secondString=None):
-    file_name = 'output/LF8.log'
+    file_name = '../src/output/LF8.log'
     with open(file_name, 'r') as logFile:
         lines = logFile.readlines()
         lastMessage = lines[-1]
