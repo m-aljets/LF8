@@ -1,7 +1,7 @@
 import unittest
 import tempfile
 import logging
-from LF8.src.Alarmsystem import Alarmsystem
+from Alarmsystem import Alarmsystem
 
 
 class TestAlarmsystem(unittest.TestCase):
