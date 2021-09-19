@@ -29,7 +29,7 @@ def useArguments():
         if argument == '-h' or argument == '--help':
             print('-cpu -> CPU-Frequency\n-memory -> utilized Memory')
         elif argument == '-cpu':
-            alarmSystem.examine('CPU Frequency', 91, SOFT_LIMIT, HARD_LIMIT, 'debug', configLog())
+            alarmSystem.examine('CPU Frequency', monitor().cpuFrequency, SOFT_LIMIT, HARD_LIMIT, 'debug', configLog())
         elif argument == '-memory':
             alarmSystem.examine('Used Memory', monitor().usedMemory, SOFT_LIMIT, HARD_LIMIT, 'debug', configLog())
         else:
@@ -39,5 +39,7 @@ def useArguments():
         print('')
         alarmSystem.examine('Used Memory', monitor().usedMemory, SOFT_LIMIT, HARD_LIMIT, 'debug', configLog())
 
+
 AcountManager = logInDienst.LogInService()
 useArguments()
+print("Ausführung erfolgreich.")
