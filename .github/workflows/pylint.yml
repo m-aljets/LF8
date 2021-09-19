@@ -76,5 +76,5 @@ jobs:
     steps:
       - name: Echo environment secret
         run: |
-          echo ${{ github.secrets.DEPLOY_ENV_MSG }}
+          echo 'This is the deploy stage!'
 
