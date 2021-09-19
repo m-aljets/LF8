@@ -56,7 +56,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Step 1 Checkout
+        uses: actions/checkout@v2
       - name: Automated Unit Tests
         run: |
+          cd LF8/src
           pytest test_Alarmsystem.py
 
