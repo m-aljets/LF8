@@ -58,6 +58,6 @@ jobs:
     steps:
       - name: Automated Unit Tests
         run: |
-          cd LF8/src
+          cd LF8/src/
           pytest test_Alarmsystem.py
 
