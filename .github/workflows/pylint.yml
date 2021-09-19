@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Automated Unit Tests
-      run: |
+        run: |
           cd LF8/src
           pytest test_Alarmsystem.py
 
