@@ -38,8 +38,6 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pylint
-          pip install pytest
           pip install psutil
 
   flake8-linting:
@@ -58,6 +56,14 @@ jobs:
     steps:
       - name: Step 1 Checkout
         uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
       - name: Automated Unit Tests
         run: |
           cd LF8/src
