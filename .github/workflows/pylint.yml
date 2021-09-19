@@ -77,7 +77,7 @@ jobs:
       ENV: deploy-env
     steps:
       - name: Echo environment
-        if: ${{ env.ENV === 'deploy-env' }}
+        if: ${{ env.ENV == 'deploy-env' }}
         run: |
           echo 'This is the deploy stage!'
 
