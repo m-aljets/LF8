@@ -1,4 +1,4 @@
-name: Pylint
+name: CI/CD Pipeline
 
 on:
   push:
