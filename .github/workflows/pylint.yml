@@ -73,8 +73,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     environment: deploy-env
+    env:
+      ENV: deploy-env
     steps:
-      - name: Echo environment secret
+      - name: Echo environment
+        if: ${{ env.ENV === 'deploy-env' }}
         run: |
           echo 'This is the deploy stage!'
 
