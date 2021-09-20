@@ -31,3 +31,9 @@ Class diagram: https://drive.google.com/file/d/19I55txKxGC7Cm3VqY7afn4dk5Nl-HSWJ
 
 Sequence diagram: https://drive.google.com/file/d/1vv3gI6J46ldkY-Avwdzxz5BvxKFQMAKm/view?usp=sharing
 
+
+### Limitations
+
+It would have been great if the logInService would be used in the alarmsystem module and the user email adress would have been passed. At the moment the warning mails when the hard limit is exceeded are sent to one email adress only. 
+
+The next step would have been to set up a server e.g. on one of our rasperry pies where the code is deployed to.
