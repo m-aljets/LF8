@@ -77,7 +77,7 @@ jobs:
           echo 'Finished Unit Tests'
 
   deploy:
-    needs: build
+    needs: [build,flake8-linting,test]
     runs-on: ubuntu-latest
     environment: deploy-env
     env:
