@@ -37,8 +37,10 @@ jobs:
           python-version: 3.9
       - name: Install dependencies
         run: |
+          echo 'Installing dependencies...'
           python -m pip install --upgrade pip
           pip install psutil
+          echo 'Finished build stage!'
 
   flake8-linting:
     needs: build
@@ -46,9 +48,12 @@ jobs:
     steps:
       - name: Lint with flake8
         run: |
+          echo 'Installing flake8 linter...'
           pip install flake8
+          echo 'Start linting...'
           flake8 . --count --select=E9 --show-source --statistics
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+          echo 'Finished linting!'
 
   test:
     needs: build
@@ -67,7 +72,9 @@ jobs:
       - name: Automated Unit Tests
         run: |
           cd LF8/src
+          echo 'Starting unit tests...'
           pytest test_Alarmsystem.py
+          echo 'Finished Unit Tests'
 
   deploy:
     needs: build
@@ -79,5 +86,7 @@ jobs:
       - name: Echo environment
         if: ${{ env.ENV == 'deploy-env' }}
         run: |
+          echo 'Start deploying to deploy-env'
           echo 'This is the deploy stage!'
+          echo 'Finished deploy stage!'
 
