@@ -40,7 +40,7 @@ jobs:
           echo 'Installing dependencies...'
           python -m pip install --upgrade pip
           pip install psutil
-          echo 'Finished build stage!'
+          echo 'Finished building!'
 
   flake8-linting:
     needs: build
