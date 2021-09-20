@@ -2,7 +2,7 @@
 
 ## Improvements
 
-### Seperate jobs in workflow
+### Seperate jobs (stages) in workflow (pipeline)
 
 Everything was done within one job before. Now there are four different jobs:
 
@@ -11,7 +11,7 @@ Everything was done within one job before. Now there are four different jobs:
 - test
 - deploy
 
-### Deploy stage in workflow
+### Deploy job in workflow
 
 We don't have our script running on a server, so we don't have a productive environment to deploy to. For this reason, to be able to have a deploy stage nevertheless, we created a "deploy-env" 	environment in GitHub that we deploy our code to. In addition we define and use an environment variable in this stage. 
 
